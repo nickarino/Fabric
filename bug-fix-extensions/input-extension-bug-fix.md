@@ -6,6 +6,10 @@
 
 When using `{{input}}` inside extension calls within patterns, the input parameter was not being passed through correctly, resulting in empty values being sent to extensions.
 
+### Key Insight
+
+* Replace the sentinel **during** extension processing, **before** execution, when we have both the sentinel and the actual input available.
+
 ### Example Bug Behavior
 
 **Pattern:** `ai_echo/system.md`
